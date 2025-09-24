@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stages - Mon portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url("IMG/fondportfolio1.avif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ----- NAVBAR ----- */
+    nav {
+      background-color: #3b2dbd;
+      padding: 10px 0;
+      margin-top: 80px; /* ajuste cette valeur pour aligner avec index.html */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #007bff;
+    }
+
+    /* Lien actif (page courante) */
+    nav ul li a.active {
+      background-color: #00aaff;
+      color: white;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="stages.html" class="active">Stages</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="veille.html">Veille Info</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 - Mon portfolio</p>
+  </footer>
+</body>
+</html>

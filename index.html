@@ -1,67 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon premier site</title>
-    <!-- Import de la police JejuHallasan depuis Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background-image: url("IMG/fondportfolio1.avif");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center; /* centre le contenu */
-        }
+  <meta charset="UTF-8">
+  <title>Portfolio Personnel</title>
+  <!-- Import police JejuHallasan -->
+  <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url("IMG/fondportfolio1.avif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF; /* bouton bleu */
-            color: #FFD700; /* texte jaune */
-            text-decoration: none; /* supprime le souligné */
-            border-radius: 5px; /* coins arrondis */
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+    /* ----- NAVBAR ----- */
+    nav {
+      background-color: #3b2dbd; /* bandeau violet */
+      padding: 10px 0;
+    }
 
-        .btn:hover {
-            background-color: #0056b3; /* bleu foncé au survol */
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
 
-        .btn-static {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #FFD700;
-            border-radius: 5px;
-            font-weight: bold;
-            font-family: 'Jeju Hallasan', cursive; /* Police personnalisée */
-        }
-    </style>
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 20px; /* arrondi pour l'effet bulle */
+      transition: background-color 0.3s;
+    }
+
+    /* Effet hover */
+    nav ul li a:hover {
+      background-color: #007bff;
+    }
+
+    /* Page active */
+    nav ul li a.active {
+      background-color: #00aaff;
+      color: white;
+    }
+
+    /* ----- Boutons style CV ----- */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #FFD700;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-static {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #FFD700;
+      border-radius: 5px;
+      font-weight: bold;
+      font-family: 'Jeju Hallasan', cursive;
+    }
+
+    footer {
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Ceci est mon premier paragraphe en HTML.</p>
-    <a href="https://github.com/pak19lys" target="_blank">Visitez mon GitHub dès maintenant</a>
-    <hr>
+  <h1>Bienvenue sur mon portfolio</h1>
 
-    <!-- Nouveau bouton statique -->
-    <p>
-        <span class="btn-static">Bonjour, voici mon portfolio personnel</span>
-    </p>
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="stages.html">Stages</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="veille.html">Veille Info</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <img src="Liens/CvGheeraertThibaut.pdf" alt="Photo de profil">
-    <p>
-        <a href="Liens/CvGheeraertThibaut.pdf" download="CvGheeraertThibaut.pdf" class="btn">Télécharger mon CV</a>
-    </p>
+  <!-- Bouton statique personnalisé -->
+  <p>
+    <span class="btn-static">Bonjour, voici mon portfolio personnel</span>
+  </p>
 
-    <footer>
-        <p>© 2025 - Mon portfolio</p>
-    </footer>
+  <img src="IMG/CVthibaut.png" alt="Photo de profil">
+  <p>
+    <a href="Liens/CvGheeraertThibaut.pdf" download="CvGheeraertThibaut.pdf" class="btn">Télécharger mon CV</a>
+  </p>
+
+  <footer>
+    <p>© 2025 - Mon portfolio</p>
+  </footer>
 </body>
 </html>
