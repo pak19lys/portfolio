@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Mon premier site</title>
+    <!-- Import de la police JejuHallasan depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             min-height: 100vh;
-            background-image: url("IMG/fondportfolio1.avif"); /* Mets le chemin de ton image ici */
-            background-size: cover;     /* L’image couvre tout l’écran */
-            background-position: center;/* Centrage */
-            background-repeat: no-repeat; /* Pas de répétition */
+            background-image: url("IMG/fondportfolio1.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            color: white; /* Texte blanc pour bien voir sur un fond sombre */
+            color: white;
+            text-align: center; /* centre le contenu */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF; /* bouton bleu */
+            color: #FFD700; /* texte jaune */
+            text-decoration: none; /* supprime le souligné */
+            border-radius: 5px; /* coins arrondis */
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* bleu foncé au survol */
+        }
+
+        .btn-static {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #FFD700;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: 'Jeju Hallasan', cursive; /* Police personnalisée */
         }
     </style>
 </head>
@@ -21,33 +49,16 @@
     <p>Ceci est mon premier paragraphe en HTML.</p>
     <a href="https://github.com/pak19lys" target="_blank">Visitez mon GitHub dès maintenant</a>
     <hr>
-    <h2>Mes compétences :</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python</li>
-    </ul>
+
+    <!-- Nouveau bouton statique -->
+    <p>
+        <span class="btn-static">Bonjour, voici mon portfolio personnel</span>
+    </p>
+
     <img src="IMG/CVthibaut.png" alt="Photo de profil">
     <p>
-  <a href="Liens/CvGheeraertThibaut.pdf" download="CvGheeraertThibaut.pdf" class="btn">Télécharger mon CV</a>
-</p>
-
-<style>
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF; /* bouton bleu */
-    color: #FFD700; /* texte jaune */
-    text-decoration: none; /* supprime le souligné */
-    border-radius: 5px; /* coins arrondis */
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-
-  .btn:hover {
-    background-color: #0056b3; /* bleu foncé au survol */
-  }
-</style>
+        <a href="Liens/CvGheeraertThibaut.pdf" download="CvGheeraertThibaut.pdf" class="btn">Télécharger mon CV</a>
+    </p>
 
     <footer>
         <p>© 2025 - Mon portfolio</p>
