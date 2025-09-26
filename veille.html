@@ -103,26 +103,31 @@
   <!-- Message temporaire -->
   <div id="message-temp" class="hidden">Article en cours de rédaction</div>
 
+    <!-- CONTENU CENTRAL -->
+  <main>
+    <h1>Veille informatique</h1>
+    <p>
+      Un article est actuellement <strong>en cours de rédaction</strong> et sera bientôt disponible 
+      sur cette page. 
+    </p>
+    <p>
+      Ce contenu viendra présenter le fruit de ma veille dans le domaine de 
+      <strong>la cybersécurité</strong>, avec une analyse des dernières tendances et évolutions 
+      technologiques.
+    </p>
+    <p>
+      Revenez prochainement pour découvrir cet article qui viendra enrichir mon 
+      <strong>portfolio</strong>.
+    </p>
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2025 - Mon portfolio</p>
   </footer>
 
-  <!-- JS externe pour afficher le message au chargement -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const message = document.getElementById('message-temp');
-
-      if (message) {
-        message.classList.remove('hidden');
-        message.classList.add('show');
-
-        setTimeout(() => {
-          message.classList.remove('show');
-          message.classList.add('hidden');
-        }, 4000);
-      }
-    });
-  </script>
+ <!-- JS externe (pris dans le dossier portfolio) -->
+  <script src="messagetemp.js"></script>
+  
 </body>
 </html>
