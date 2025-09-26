@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Stages - Mon portfolio</title>
+  <title>Veille Info - Mon portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
   <style>
     body {
@@ -15,7 +15,6 @@
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -25,7 +24,7 @@
     nav {
       background-color: #3b2dbd;
       padding: 10px 0;
-      margin-top: 80px; /* ajuste cette valeur pour aligner avec index.html */
+      margin-top: 80px;
     }
 
     nav ul {
@@ -50,18 +49,42 @@
       background-color: #007bff;
     }
 
-    /* Lien actif (page courante) */
     nav ul li a.active {
       background-color: #00aaff;
       color: white;
     }
 
-    /* ----- FOOTER ----- */
     footer {
       background-color: rgba(0,0,0,0.6);
       padding: 10px 0;
       text-align: center;
       width: 100%;
+    }
+
+    /* ----- Message temporaire ----- */
+    #message-temp {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 0, 0.8);
+      color: black;
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      font-size: 1.3rem;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    #message-temp.show {
+      opacity: 1;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
@@ -77,9 +100,29 @@
     </ul>
   </nav>
 
+  <!-- Message temporaire -->
+  <div id="message-temp" class="hidden">Article en cours de rédaction</div>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2025 - Mon portfolio</p>
   </footer>
+
+  <!-- JS externe pour afficher le message au chargement -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const message = document.getElementById('message-temp');
+
+      if (message) {
+        message.classList.remove('hidden');
+        message.classList.add('show');
+
+        setTimeout(() => {
+          message.classList.remove('show');
+          message.classList.add('hidden');
+        }, 4000);
+      }
+    });
+  </script>
 </body>
 </html>

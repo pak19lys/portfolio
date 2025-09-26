@@ -13,14 +13,14 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
+      font-family: 'Jeju Hallasan', Arial, sans-serif;
       color: white;
       text-align: center;
     }
 
     /* ----- NAVBAR ----- */
     nav {
-      background-color: #3b2dbd; /* bandeau violet */
+      background-color: #3b2dbd; 
       padding: 10px 0;
     }
 
@@ -33,31 +33,26 @@
       gap: 40px;
     }
 
-    nav ul li {
-      position: relative;
-    }
-
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       padding: 8px 16px;
-      border-radius: 20px; /* arrondi pour l'effet bulle */
-      transition: background-color 0.3s;
+      border-radius: 20px;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
-    /* Effet hover */
     nav ul li a:hover {
       background-color: #007bff;
+      transform: scale(1.1);
     }
 
-    /* Page active */
     nav ul li a.active {
       background-color: #00aaff;
       color: white;
     }
 
-    /* ----- Boutons style CV ----- */
+    /* ----- Boutons ----- */
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -86,6 +81,32 @@
     footer {
       margin-top: 30px;
     }
+
+    /* ----- Message temporaire ----- */
+    #message-temp {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 0, 0.8); /* jaune semi-transparent */
+      color: black;
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      font-size: 1.3rem;
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    #message-temp.show {
+      opacity: 1;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -102,22 +123,29 @@
     </ul>
   </nav>
 
-  <!-- Bouton statique personnalisé -->
+  <!-- Bouton statique -->
   <p>
     <span class="btn-static">Bonjour, voici mon portfolio personnel</span>
   </p>
 
   <img src="IMG/CVthibaut.png" alt="Photo de profil">
   <p>
-  <a href="Liens/CvGheeraertThibaut.pdf" 
-   download="CvGheeraertThibaut.pdf" 
-   type="application/pdf" 
-   class="btn">
-   Télécharger mon CV
-</a>
+    <a href="Liens/CvGheeraertThibaut.pdf" 
+       download="CvGheeraertThibaut.pdf" 
+       type="application/pdf" 
+       class="btn">
+       Télécharger mon CV
+    </a>
   </p>
+
+  <!-- Message temporaire -->
+  <div id="message-temp" class="hidden">Désolé, page en cours de développement.</div>
+
   <footer>
     <p>© 2025 - Mon portfolio</p>
   </footer>
+
+  <!-- ----- JS externe ----- -->
+  <script src="messagetemp.js"></script>
 </body>
 </html>
