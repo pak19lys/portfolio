@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Stages - Mon portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Jeju+Hallasan&display=swap" rel="stylesheet">
+  <title>Contact - Mon portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -25,7 +25,7 @@
     nav {
       background-color: #3b2dbd;
       padding: 10px 0;
-      margin-top: 80px; /* ajuste cette valeur pour aligner avec index.html */
+      margin-top: 80px; /* même hauteur que index.html */
     }
 
     nav ul {
@@ -50,10 +50,52 @@
       background-color: #007bff;
     }
 
-    /* Lien actif (page courante) */
     nav ul li a.active {
       background-color: #00aaff;
       color: white;
+    }
+
+    /* ----- FICHE CONTACT ----- */
+    .contact-card {
+      background-color: rgba(30, 60, 150, 0.9);
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      color: #ffffff;
+    }
+
+    .contact-info {
+      text-align: left;
+      flex: 1;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #ffffff;
+    }
+
+    .contact-img {
+      flex: 1;
+      text-align: right;
+    }
+
+    .contact-img img {
+      max-width: 100%;
+      border-radius: 5px;
     }
 
     /* ----- FOOTER ----- */
@@ -76,6 +118,20 @@
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- FICHE CONTACT -->
+  <div class="contact-card">
+    <div class="contact-info">
+      <h2>FICHE CONTACT</h2>
+      <p><i class="fas fa-phone"></i> +33 07 60 16 52 37</p>
+      <p><i class="fas fa-envelope"></i> thibautgheeraert@icloud.com</p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/thibaut-gheeraert-9aa46b384" target="_blank" style="color:#ffffff;">LinkedIn</a></p>
+      <p><i class="fab fa-github"></i> <a href="https://github.com/pak19lys" target="_blank" style="color:#ffffff;">GitHub</a></p>
+    </div>
+    <div class="contact-img">
+      <img src="IMG/Contactillustration.jpg" alt="Illustration contact">
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
